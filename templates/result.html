@@ -1,0 +1,16 @@
+<!-- templates/result.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ result }}</h1>
+
+<form action="/next" method="post">
+    <input type="hidden"
+           name="number"
+           value="{{ number }}">
+
+    <button type="submit">
+        Next Question
+    </button>
+</form>
+{% endblock %}

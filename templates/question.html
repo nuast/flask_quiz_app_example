@@ -1,0 +1,21 @@
+<!-- templates/question.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Quiz</h1>
+
+<p>{{ question }}</p>
+
+<form action="/answer" method="post">
+    <input type="text" name="answer">
+
+    <input type="hidden"
+           name="number"
+           value="{{ number }}">
+
+    <button type="submit">
+        Check Answer
+    </button>
+</form>
+
+{% endblock %}
